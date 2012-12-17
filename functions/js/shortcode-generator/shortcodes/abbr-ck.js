@@ -1,0 +1,1 @@
+wooShortcodeMeta={attributes:[{label:"Abbreviation",id:"content",help:"The abbreviated text.",isRequired:!0},{label:"Full Text",id:"title",help:"The full, unabbreviated, text.",isRequired:!0}],defaultContent:"",shortcode:"abbr",shortcodeType:"text-replace"};

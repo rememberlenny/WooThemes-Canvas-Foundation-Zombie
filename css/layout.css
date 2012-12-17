@@ -1,0 +1,178 @@
+/*
+The styles in this stylesheet only apply to resolutions 768px and up
+
+CALCULATING DIMENSIONS:
+----------------------
+The layout is fluid. The sote wrapper (.col-full) has a fixed pixel max-width.
+All subsequent dimensions are calculated based on that fixed pixel width, using the formula: target / context = result
+Credit - http://www.alistapart.com/articles/fluidgrids/
+
+-----
+INDEX
+-----
+
+1. Global dropdown styles
+2. Top Navigation
+3. Main navigation dropdown menus
+4. General layout related tweaks
+
+*/
+
+body  {  }
+
+@media only screen and (max-width: 1200px)  {
+	.business #loopedSlider a.flex-prev  { left: -20px; }
+	.business #loopedSlider a.flex-prev:before, .business #loopedSlider a.flex-next:before  { font-size: 16px; }
+	.business #loopedSlider a.flex-next  { right: -30px; }
+}
+
+@media only screen and (max-width: 768px) {
+	#navigation ul li:first-child, #navigation ul li:first-child a  { border-radius: 5px 5px 0 0!important; -moz-border-radius: 5px 5px 0 0!important; -webkit-border-radius: 5px 5px 0 0!important; }
+	ul.nav, ul.nav ul  { border: none!important; }
+	#navigation ul.nav > li { border-right: none!important; }
+	body.boxed-layout  { padding: 0; }
+	body.boxed-layout #top  { margin-left: 1.5em; margin-right: 1.5em; }
+	body.boxed-layout #wrapper  { margin-left: 0; margin-right: 0; border: none; }
+	.magazine #loopedSlider a.flex-next, .magazine #loopedSlider a.flex-prev  { bottom: auto; top: 20px; }
+	#logo{
+		margin-top: 1em;
+	}
+	#main-nav{
+		padding-bottom:1em;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+
+	/* 1. GLOBAL DROPDOWN STYLES (these are purely for the dropdown layout and you should only edit the width of the dropdowns) */
+  	ul.nav { position: relative; margin-bottom: 0; width: auto; }
+  	ul.nav li { position: relative; float: left; zoom: 1; list-style: none; }
+  	ul.nav li a { display: block; padding-top: 1em!important; padding-bottom: 1em!important; }
+  	ul.nav li a:hover  { text-decoration: none; }
+  	ul.nav li ul li a:hover  { text-decoration: underline; }
+  	ul.nav ul { width: 150%; visibility: hidden; position: absolute; top: 100%; left: 0; z-index: 9999; margin: 0; padding: 0.4em 0; }
+  	ul.nav ul li { float: none; }
+  	ul.nav ul li a { width: 100%; display: inline-block; padding: 0.7em 1em!important; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; font-size: 0.9em; }
+  	ul.nav ul ul { left: 100%; top: 0; }
+  	ul.nav li:hover > ul { visibility: visible; }
+  	/* 2. TOP NAVIGATION (Add top navigation presentational styles here) */
+  	#top { background: #000; margin: 0 -1.618em; padding: 0 1.618em; }
+  	#top #top-nav { display: block!important; }
+  	#top ul.nav {  }
+  	#top ul.nav li a  { color: #ddd; padding-top: 0.3em!important; padding-bottom: 0.3em!important; font-size: 0.9em; }
+  	#top ul.nav > li a:hover { background: #555; color: #ddd; }
+  	#top ul.nav > li:hover { background: #555; color: #ddd; }
+  	#top ul.nav ul { background: #555; }
+  	#top ul.nav ul li a  { color: #ddd!important; }
+  	#top ul.nav li.current_page_item a,
+  	#top ul.nav li.current_page_parent a,
+  	#top ul.nav li.current-menu-ancestor a,
+  	#top ul.nav li.current-cat a,
+  	#top ul.nav li.current-menu-item a  { color: #333; }
+  	/* 3. MAIN NAVIGATION DROPDOWN MENUS (Add main navigation presentational styles here) */
+  	#navigation { display: block !important; }
+  	#navigation ul li:first-child, #navigation ul li:first-child a  {  }
+  	#navigation ul ul li:first-child, #navigation ul ul li:first-child a  { border-radius: 0; -moz-border-radius: 0; -webkit-border-radius: 0; }
+  	#navigation ul.nav > li { padding-top: 1em; }
+  	#navigation ul.nav > li a:hover { background: #fff; }
+  	#navigation ul.nav > li:hover { background: #ffff; }
+  	#navigation ul.nav ul { border: 1px solid #e6e6e6; left: -1px; }
+  	#navigation ul.nav ul ul { top: -1px; left: 100%; }
+  	#top .nav li.parent > a { position: relative; padding-right: 2em; }
+  	#top .nav li.parent > a:after { content: ""; display: block; border: .3em solid #ccc; border-color: #ccc transparent transparent transparent; position: absolute; top: 48%; right: .8751em; }
+  	#navigation .nav li ul li.parent a { padding-right: 0; }
+  	#navigation .nav li ul li.parent a:after { border-color: transparent transparent transparent #ccc; right: 0; top: 46%; }
+  	#navigation .nav li.parent > a { position: relative; padding-right: 2em; }
+  	#navigation .nav li.parent > a:after { content: ""; display: block; border: 0.3em solid #ccc; border-color: #ccc transparent transparent transparent; position: absolute; top: 48%; right: .8751em; }
+  	#navigation .nav li ul li.parent a { padding-right: 0; }
+  	#navigation .nav li ul li.parent a:after { border-color: transparent transparent transparent #ccc; right: 0.8751em; top: 46%; }
+  	#header h3.nav-toggle { display: none; }
+
+	/* 4. GENERAL LAYOUT RELATED TWEAKS */
+
+	/* Header */
+	#logo  { float: left; }
+	#topad  { float:right; margin: 0; }
+
+	/* Columns & Containers */
+	.col-left { float: left; }
+	.col-right { float: right; }
+	.col-full, #wrapper  { margin: 0 auto; }
+	#wrapper #sidebar  { margin-top: 0; }
+	.magazine .block { float:left; width:48%; }
+	.magazine .block.last { float:right; }
+
+	/* Sliders */
+	#loopedSlider .content  { position:absolute; left:0px; top:20px; background: none; }
+	#loopedSlider .content h2 { float: left; font-size: 26px; }
+	#loopedSlider .content p { clear:both; float:left; }
+	#loopedSlider .content p, #loopedSlider .content h2 { background:rgb(0,0,0); background:rgba(0,0,0,.7); max-width:350px; }
+
+	/* Sidebar */
+	#main-sidebar-container { display:inline; position: relative; }
+	#main-sidebar-container #main  { position: relative; }
+	#main-sidebar-container #sidebar  { display: inline; }
+	#sidebar-alt  { display: inline; margin: 0; }
+
+	/* Footer */
+	#footer-widgets .block { margin-right: 3.8%; float:left; } /* 210 / 940 */
+	#footer-widgets.col-1 .block { width: 100%; margin-right: 0; }
+	#footer-widgets.col-2 .block { width: 48%; }
+	#footer-widgets.col-3 .block { width: 30.75%; }
+	#footer-widgets.col-4 .block { width: 22.05%; }
+	#footer-widgets.col-2 .footer-widget-2, #footer-widgets.col-3 .footer-widget-3, #footer-widgets.col-4 .footer-widget-4  { margin-right: 0; }
+
+	/* Column Widths */
+	.one-col #main { float: none; }
+	.two-col-left #main-sidebar-container #main,
+	.two-col-right #main-sidebar-container #main  { width: 74.89%; } /* 610 / 940 */
+
+	.two-col-left #main-sidebar-container #sidebar,
+	.two-col-right #main-sidebar-container #sidebar  { width: 21.91%; } /* 300 / 940 */
+
+	.three-col-left #main-sidebar-container #sidebar,
+	.three-col-middle #main-sidebar-container #sidebar,
+	.three-col-right #main-sidebar-container #sidebar  { width: 39.47%; } /* 300 / 760 */
+
+	.three-col-left #main-sidebar-container,
+	.three-col-middle #main-sidebar-container,
+	.three-col-right #main-sidebar-container  { width: 80.85%; } /* 760 / 940 */
+
+	.three-col-left #main-sidebar-container #main,
+	.three-col-middle #main-sidebar-container #main,
+	.three-col-right #main-sidebar-container #main  { width: 57.89%; }  /* 440 / 760 */
+
+	#sidebar-alt { width: 17.02%; } /* 160 / 940 */
+
+	/* Column Floating */
+	.two-col-left #main-sidebar-container #main,
+	.two-col-right #main-sidebar-container #sidebar,
+	.three-col-left #main-sidebar-container,
+	.three-col-left #main-sidebar-container #main,
+	.three-col-middle #main-sidebar-container #main,
+	.three-col-middle #sidebar-alt,
+	.three-col-right #main-sidebar-container #sidebar,
+	.three-col-right #sidebar-alt  {  float:left;  }
+
+	.two-col-left #main-sidebar-container #sidebar,
+	.two-col-right #main-sidebar-container #main,
+	.three-col-left #main-sidebar-container #sidebar,
+	.three-col-left #sidebar-alt,
+	.three-col-middle #main-sidebar-container,
+	.three-col-middle #main-sidebar-container #sidebar,
+	.three-col-right #main-sidebar-container,
+	.three-col-right #main-sidebar-container #main{ float:right; }
+
+	/* Contact Page */
+	.page-template-template-contact-php .location-twitter .col-left { float: left; }
+  	.page-template-template-contact-php .location-twitter #office-location { width: 48%; margin: 0; }
+ 	.page-template-template-contact-php .location-twitter .contact-social { float: right; width: 48%; }
+ 	.page-template-template-contact-php .location-twitter .contact-social #twitter { margin: 0; }
+
+ 	/* Subcribe & Connect */
+	#main #connect .col-left  { float: left; }
+	#connect .col-right  { float: right; }
+	#main #connect .col-left, #connect .col-right { width:48%; }
+	#connect .related-posts { border-top: 0; border-left:1px solid #e6e6e6; padding-top: 0; padding-left:15px; }
+
+}
