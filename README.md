@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # [HTML5 Boilerplate](http://html5boilerplate.com)
 
 HTML5 Boilerplate is a professional front-end template for building fast,
@@ -61,3 +62,9 @@ you want to write about your project.
 Anyone and everyone is welcome to
 [contribute](/h5bp/html5-boilerplate/blob/master/CONTRIBUTING.md). Hundreds
 of developers have helped make the HTML5 Boilerplate what it is today.
+=======
+WooThemes-Canvas-Foundation-Zombie
+==================================
+
+Prototyped a theme in Zurb's Foundation and moved the CSS and templates into Canvas from WooThemes
+>>>>>>> b1db33bd2dd1292dba3284a8a07c199a4efce490
