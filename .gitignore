@@ -2,18 +2,15 @@
 # Include your project-specific ignores in this file
 # Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
 =======
+sass/
+.sass-cache/
+doc/
+images/
+javascripts/
+stylesheets/
+.DS_Store
 .htaccess
-wp-config.php
-wp-content/uploads/
-wp-content/blogs.dir/
-wp-content/upgrade/
-wp-content/backup-db/
-wp-content/advanced-cache.php
-wp-content/wp-cache-config.php
-sitemap.xml
-*.log
-wp-content/cache/
-wp-content/backups/
-sitemap.xml
-sitemap.xml.gz
->>>>>>> b1db33bd2dd1292dba3284a8a07c199a4efce490
+.gitattributes
+config.rb
+
+
